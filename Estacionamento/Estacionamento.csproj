@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9EF96E5-07AA-463F-90CC-8EBFB77A2BAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Estacionamento</RootNamespace>
+    <AssemblyName>Estacionamento</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes/CarroGrande.cs" />
+    <Compile Include="classes/CarroPequeno.cs" />
+    <Compile Include="classes/Cliente.cs" />
+    <Compile Include="classes/ClienteDiarista.cs" />
+    <Compile Include="classes/ClienteHorista.cs" />
+    <Compile Include="classes/ClienteMensalista.cs" />
+    <Compile Include="classes/Estacionada.cs" />
+    <Compile Include="classes/IServico.cs" />
+    <Compile Include="classes/Lavagem.cs" />
+    <Compile Include="classes/Manobrista.cs" />
+    <Compile Include="classes/Moto.cs" />
+    <Compile Include="classes/Vaga.cs" />
+    <Compile Include="classes/Veiculo.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CadastroServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CadastroServico.Designer.cs">
+      <DependentUpon>frm_CadastroServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CadastroVaga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CadastroVaga.Designer.cs">
+      <DependentUpon>frm_CadastroVaga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GridCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GridCliente.Designer.cs">
+      <DependentUpon>frm_GridCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GridPlanos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GridPlanos.Designer.cs">
+      <DependentUpon>frm_GridPlanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GridVagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GridVagas.Designer.cs">
+      <DependentUpon>frm_GridVagas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GridVeiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GridVeiculos.Designer.cs">
+      <DependentUpon>frm_GridVeiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Relatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Relatorio.Designer.cs">
+      <DependentUpon>frm_Relatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CadastroServico.resx">
+      <DependentUpon>frm_CadastroServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CadastroVaga.resx">
+      <DependentUpon>frm_CadastroVaga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GridCliente.resx">
+      <DependentUpon>frm_GridCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GridPlanos.resx">
+      <DependentUpon>frm_GridPlanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GridVagas.resx">
+      <DependentUpon>frm_GridVagas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GridVeiculos.resx">
+      <DependentUpon>frm_GridVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Relatorio.resx">
+      <DependentUpon>frm_Relatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

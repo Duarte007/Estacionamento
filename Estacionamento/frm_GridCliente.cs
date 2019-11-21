@@ -17,6 +17,28 @@ namespace Estacionamento
             InitializeComponent();
         }
 
-       
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frm_GridCliente_Load(object sender, EventArgs e)
+        {
+            PopulateDataGridView();
+        }
+
+        private void PopulateDataGridView()
+        {
+            List<Cliente> clientes = frm_CadastroCliente.getClientes();
+            
+            foreach (Cliente cliente in clientes) {
+                string[] row = {
+                    cliente.getCpf(), cliente.getNome(), "teste", cliente.getVeiculo().getPlaca() };
+                this.dataGridView1.Rows.Add(row);
+            }
+
+            //songsDataGridView.Columns[0].DisplayIndex = 3;
+            
+        }
     }
 }

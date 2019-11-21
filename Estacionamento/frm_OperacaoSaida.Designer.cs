@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Chekin = new System.Windows.Forms.Button();
+            this.btn_Chekout = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Entrada = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbmVaga = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // btn_Chekin
+            // btn_Chekout
             // 
-            this.btn_Chekin.Location = new System.Drawing.Point(114, 167);
-            this.btn_Chekin.Name = "btn_Chekin";
-            this.btn_Chekin.Size = new System.Drawing.Size(75, 23);
-            this.btn_Chekin.TabIndex = 10;
-            this.btn_Chekin.Text = "Check-In";
-            this.btn_Chekin.UseVisualStyleBackColor = true;
+            this.btn_Chekout.Location = new System.Drawing.Point(114, 167);
+            this.btn_Chekout.Name = "btn_Chekout";
+            this.btn_Chekout.Size = new System.Drawing.Size(75, 23);
+            this.btn_Chekout.TabIndex = 10;
+            this.btn_Chekout.Text = "Check-Out";
+            this.btn_Chekout.UseVisualStyleBackColor = true;
+            this.btn_Chekout.Click += new System.EventHandler(this.btn_Chekout_Click);
             // 
             // dateTimePicker1
             // 
@@ -86,13 +87,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(236, 225);
-            this.Controls.Add(this.btn_Chekin);
+            this.Controls.Add(this.btn_Chekout);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.Entrada);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbmVaga);
             this.Name = "frm_OperacaoSaida";
-            this.Text = "frm_OperacaoSaida";
+            this.Text = "Check-Out";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,7 +101,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Chekin;
+        private System.Windows.Forms.Button btn_Chekout;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label Entrada;
         private System.Windows.Forms.Label label1;

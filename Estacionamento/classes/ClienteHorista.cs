@@ -12,9 +12,11 @@ using System.Threading.Tasks;
 
         #endregion
 
-        public ClienteHorista(string nome, string cpf)
+        public ClienteHorista(string nome, string cpf, Veiculo veiculo)
         {
-
+            this.nome = nome;
+            this.cpf = cpf;
+            this.veiculo = veiculo;
         }
 
         #region GetSets

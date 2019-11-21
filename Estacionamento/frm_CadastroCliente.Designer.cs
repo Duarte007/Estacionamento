@@ -33,8 +33,8 @@
             this.mkt_CPF = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.GrupCliente = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txt_nome = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.GroupVeiculos = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.mkt1_placa = new System.Windows.Forms.MaskedTextBox();
@@ -98,6 +98,13 @@
             this.GrupCliente.TabStop = false;
             this.GrupCliente.Text = "Cliente";
             // 
+            // txt_nome
+            // 
+            this.txt_nome.Location = new System.Drawing.Point(19, 51);
+            this.txt_nome.Name = "txt_nome";
+            this.txt_nome.Size = new System.Drawing.Size(199, 20);
+            this.txt_nome.TabIndex = 8;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -106,13 +113,6 @@
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Nome";
-            // 
-            // txt_nome
-            // 
-            this.txt_nome.Location = new System.Drawing.Point(19, 51);
-            this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(199, 20);
-            this.txt_nome.TabIndex = 8;
             // 
             // GroupVeiculos
             // 
@@ -184,7 +184,8 @@
             this.Controls.Add(this.GroupVeiculos);
             this.Controls.Add(this.GrupCliente);
             this.Name = "frm_CadastroCliente";
-            this.Text = "frm_CadastroCliente";
+            this.Text = "Cadastrar Cliente";
+            this.Load += new System.EventHandler(this.frm_CadastroCliente_Load);
             this.GrupCliente.ResumeLayout(false);
             this.GrupCliente.PerformLayout();
             this.GroupVeiculos.ResumeLayout(false);

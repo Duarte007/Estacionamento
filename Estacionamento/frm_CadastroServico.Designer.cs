@@ -32,13 +32,13 @@
             this.txtPrecoL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPrecoM = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblLavagem = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblManobrista = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPrecoM = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +82,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lavagem";
             // 
+            // lblLavagem
+            // 
+            this.lblLavagem.AutoSize = true;
+            this.lblLavagem.Location = new System.Drawing.Point(81, 87);
+            this.lblLavagem.Name = "lblLavagem";
+            this.lblLavagem.Size = new System.Drawing.Size(0, 13);
+            this.lblLavagem.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Valor Atual";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lblManobrista);
@@ -94,39 +111,6 @@
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Manobrista";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Preço";
-            // 
-            // txtPrecoM
-            // 
-            this.txtPrecoM.Location = new System.Drawing.Point(19, 55);
-            this.txtPrecoM.Name = "txtPrecoM";
-            this.txtPrecoM.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecoM.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Valor Atual";
-            // 
-            // lblLavagem
-            // 
-            this.lblLavagem.AutoSize = true;
-            this.lblLavagem.Location = new System.Drawing.Point(81, 87);
-            this.lblLavagem.Name = "lblLavagem";
-            this.lblLavagem.Size = new System.Drawing.Size(0, 13);
-            this.lblLavagem.TabIndex = 6;
             // 
             // lblManobrista
             // 
@@ -145,6 +129,22 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Valor Atual";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Preço";
+            // 
+            // txtPrecoM
+            // 
+            this.txtPrecoM.Location = new System.Drawing.Point(19, 55);
+            this.txtPrecoM.Name = "txtPrecoM";
+            this.txtPrecoM.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecoM.TabIndex = 3;
+            // 
             // frm_CadastroServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,7 +154,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_Salvar);
             this.Name = "frm_CadastroServico";
-            this.Text = "CadastroServico";
+            this.Text = "Cadastrar Serviço";
             this.Load += new System.EventHandler(this.frm_CadastroServico_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -17,8 +17,8 @@ namespace Estacionamento
             InitializeComponent();
         }
 
-        public List <Veiculo> veic = new List<Veiculo>();
-        public List<Cliente> cli = new List<Cliente>();
+        public static List <Veiculo> veic = new List<Veiculo>();
+        public static List<Cliente> cli = new List<Cliente>();
 
         
  
@@ -54,13 +54,13 @@ namespace Estacionamento
             switch (plano)
             {
                 case "Horista":
-                    cli.Add(new ClienteHorista(nome, cpf));
+                    cli.Add(new ClienteHorista(nome, cpf, veic[veic.Count - 1]));
                     break;
                 case "Diarista":
-                    cli.Add(new ClienteDiarista(nome, cpf));
+                    cli.Add(new ClienteDiarista(nome, cpf, veic[veic.Count - 1]));
                     break;
                 case "Mensalista":
-                    cli.Add(new ClienteMensalista(nome, cpf));
+                    cli.Add(new ClienteMensalista(nome, cpf, veic[veic.Count - 1]));
                     break;
 
 
@@ -68,9 +68,31 @@ namespace Estacionamento
                     break;
             }
 
-
+            this.clearFields();
             MessageBox.Show("Cliente Cadastrado com Sucesso");
 
+
+        }
+
+        private void clearFields() {
+            txt_nome.Text = "";
+            mkt_CPF.Text = "";
+            cbx_Plano.Text = "";
+            mkt1_placa.Text = "";
+            cmb_porte.Text = "";
+        }
+
+        public static List<Cliente> getClientes() {
+            return cli;
+        }
+
+        public static List<Veiculo> getVeiculos()
+        {
+            return veic;
+        }
+
+        private void frm_CadastroCliente_Load(object sender, EventArgs e)
+        {
 
         }
     }

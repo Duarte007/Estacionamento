@@ -10,7 +10,7 @@ public class CarroPequeno:Veiculo {
     #region Construtores
 
     public CarroPequeno(string placa) {
-
+        this.porte = "Pequeno";
         setPlaca(placa);
 
     }

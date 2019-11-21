@@ -16,5 +16,10 @@ namespace Estacionamento
         {
             InitializeComponent();
         }
+
+        private void btn_Chekout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

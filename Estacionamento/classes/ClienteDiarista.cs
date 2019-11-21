@@ -9,12 +9,15 @@ using System.Threading.Tasks;
         #region Atributos
 
         const double tarifa_dia = 30;
+        public static string plano = "Diário";
 
         #endregion
 
-         public ClienteDiarista(string nome, string cpf)
+         public ClienteDiarista(string nome, string cpf, Veiculo veiculo)
         {
-      
+            this.nome = nome;
+            this.cpf = cpf;
+            this.veiculo = veiculo;
         }
 
         #region GetSets

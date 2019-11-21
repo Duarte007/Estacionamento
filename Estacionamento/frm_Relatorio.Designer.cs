@@ -46,7 +46,7 @@
             this.ClientSize = new System.Drawing.Size(821, 553);
             this.Controls.Add(this.richTextBox1);
             this.Name = "frm_Relatorio";
-            this.Text = "frm_Relatorio";
+            this.Text = "Relatório";
             this.ResumeLayout(false);
 
         }

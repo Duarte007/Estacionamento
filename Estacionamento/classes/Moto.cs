@@ -12,7 +12,7 @@ public class Moto:Veiculo {
     #region Construtores
 
     public Moto(string placa) {
-
+        this.porte = "Moto";
         setPlaca(placa);
 
     }

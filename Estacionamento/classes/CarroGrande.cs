@@ -11,6 +11,7 @@ public class CarroGrande:Veiculo {
     #region Construtores
 
     public CarroGrande(string placa) {
+        this.porte = "Grande";
         setPlaca(placa);
     }
     #endregion

@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(731, 540);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frm_GridPlanos";
-            this.Text = "frm_GridPlanos";
+            this.Text = "Planos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

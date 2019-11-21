@@ -76,7 +76,7 @@
             this.ClientSize = new System.Drawing.Size(756, 547);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frm_GridVagas";
-            this.Text = "frm_GridVagas";
+            this.Text = "Vagas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

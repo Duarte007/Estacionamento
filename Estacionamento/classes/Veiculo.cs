@@ -7,6 +7,7 @@ public abstract class Veiculo
     protected string placa;
 
     protected Estacionada[] usos;
+    protected string porte;
 
     #endregion
 
@@ -19,11 +20,15 @@ public abstract class Veiculo
 
     }
 
+    public string getPorte() {
+        return this.porte;
+    }
+
     public void setPlaca(string placa) {
 
         try {
-            if (placa != "" && placa.Length == 7) {
-                placa = placa;
+            if (placa != "" && placa.Length == 8) {
+                this.placa = placa;
             }
         } catch (FormatException) {
 

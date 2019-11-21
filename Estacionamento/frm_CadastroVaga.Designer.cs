@@ -68,7 +68,7 @@
             this.Controls.Add(this.txtIdVaga);
             this.Controls.Add(this.label1);
             this.Name = "frm_CadastroVaga";
-            this.Text = "frm_CadastroVaga";
+            this.Text = "Cadastrar Vaga";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,11 +8,13 @@ using System.Threading.Tasks;
         #region Atributos
         public string nome;
         public string cpf;
+        protected Veiculo veiculo;
+        public static string plano;
 
         #endregion
 
-        #region GetSets
-        public string getNome() {
+    #region GetSets
+    public string getNome() {
             return this.nome;
         }
 
@@ -20,7 +22,12 @@ using System.Threading.Tasks;
             return this.cpf;
         }
 
-        public void setNome(string nome)  {
+    public Veiculo getVeiculo()
+    {
+        return this.veiculo;
+    }
+
+    public void setNome(string nome)  {
             try {
                 if (nome != "")
                     this.nome = nome;

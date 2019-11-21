@@ -92,7 +92,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbmVaga);
             this.Name = "frm_OparacaoEntrada";
-            this.Text = "frm_OparacaoEntrada";
+            this.Text = "Check-In";
             this.Load += new System.EventHandler(this.frm_OparacaoEntrada_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

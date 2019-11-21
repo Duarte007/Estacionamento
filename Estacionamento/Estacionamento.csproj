@@ -46,24 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="classes/CarroGrande.cs" />
-    <Compile Include="classes/CarroPequeno.cs" />
-    <Compile Include="classes/Cliente.cs" />
-    <Compile Include="classes/ClienteDiarista.cs" />
-    <Compile Include="classes/ClienteHorista.cs" />
-    <Compile Include="classes/ClienteMensalista.cs" />
-    <Compile Include="classes/Estacionada.cs" />
-    <Compile Include="classes/IServico.cs" />
-    <Compile Include="classes/Lavagem.cs" />
-    <Compile Include="classes/Manobrista.cs" />
-    <Compile Include="classes/Moto.cs" />
-    <Compile Include="classes/Vaga.cs" />
-    <Compile Include="classes/Veiculo.cs" />
+    <Compile Include="classes\CarroGrande.cs" />
+    <Compile Include="classes\CarroPequeno.cs" />
+    <Compile Include="classes\Cliente.cs" />
+    <Compile Include="classes\ClienteDiarista.cs" />
+    <Compile Include="classes\ClienteHorista.cs" />
+    <Compile Include="classes\ClienteMensalista.cs" />
+    <Compile Include="classes\Estacionada.cs" />
+    <Compile Include="classes\IServico.cs" />
+    <Compile Include="classes\Lavagem.cs" />
+    <Compile Include="classes\Manobrista.cs" />
+    <Compile Include="classes\Moto.cs" />
+    <Compile Include="classes\Vaga.cs" />
+    <Compile Include="classes\Veiculo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CadastroCliente.Designer.cs">
+      <DependentUpon>frm_CadastroCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_CadastroServico.cs">
       <SubType>Form</SubType>
@@ -101,6 +107,18 @@
     <Compile Include="frm_GridVeiculos.Designer.cs">
       <DependentUpon>frm_GridVeiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_OparacaoEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_OparacaoEntrada.Designer.cs">
+      <DependentUpon>frm_OparacaoEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_OperacaoSaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_OperacaoSaida.Designer.cs">
+      <DependentUpon>frm_OperacaoSaida.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Relatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +129,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CadastroCliente.resx">
+      <DependentUpon>frm_CadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CadastroServico.resx">
       <DependentUpon>frm_CadastroServico.cs</DependentUpon>
@@ -129,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_GridVeiculos.resx">
       <DependentUpon>frm_GridVeiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_OparacaoEntrada.resx">
+      <DependentUpon>frm_OparacaoEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_OperacaoSaida.resx">
+      <DependentUpon>frm_OperacaoSaida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Relatorio.resx">
       <DependentUpon>frm_Relatorio.cs</DependentUpon>

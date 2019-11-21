@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace trab_final {
-    class ClienteDiarista {
+
+    public class ClienteDiarista : Cliente {
         #region Atributos
 
         const double tarifa_dia = 30;
 
         #endregion
+
+         public ClienteDiarista(string nome, string cpf)
+        {
+      
+        }
 
         #region GetSets
 
@@ -21,6 +26,8 @@ namespace trab_final {
         #endregion
 
         #region Métodos
+
+
 
         public double valorTarifa(Estacionada quando) {
             double tarifa_final = 0;            
@@ -34,6 +41,8 @@ namespace trab_final {
 
         }
 
+
+
         #endregion
     }
-}
+

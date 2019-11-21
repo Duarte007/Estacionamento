@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace trab_final {
     public abstract class Cliente {
         #region Atributos
         public string nome;
@@ -44,10 +43,10 @@ namespace trab_final {
 
         #region Métodos
 
+       
         public double valorTarifa(Estacionada quando) {
             return 0d;
         }
 
         #endregion
     }
-}

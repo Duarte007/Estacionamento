@@ -4,17 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace trab_final {
-    class ClienteMensalista {
+
+    public class ClienteMensalista : Cliente {
         #region Atributos
 
         const double tarifa_mensal = 250;
 
-        #endregion
+    #endregion
 
-        #region GetSets
+    public ClienteMensalista(string nome, string cpf)
+    {
 
-        public double getTarifaMensal() {
+    }
+
+    #region GetSets
+
+    public double getTarifaMensal() {
             return tarifa_mensal;
         }
 
@@ -29,4 +34,4 @@ namespace trab_final {
         #endregion
 
     }
-}
+

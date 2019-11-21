@@ -4,7 +4,7 @@ public class Lavagem:IServico {
 		public Lavagem() {
 		}
 
-        public static double PrecoLavagem = 50.50;
+        public static double PrecoLavagem ;
 
         #region IServico members
 

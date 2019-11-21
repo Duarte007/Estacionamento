@@ -10,20 +10,21 @@ using System.Windows.Forms;
 
 namespace Estacionamento
 {
-    public partial class frm_CadastroVaga : Form
+    public partial class frm_OparacaoEntrada : Form
     {
-        public frm_CadastroVaga()
+        public frm_OparacaoEntrada()
         {
             InitializeComponent();
         }
 
-        public List<Vaga> vaga = new List<Vaga>();
-
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void frm_OparacaoEntrada_Load(object sender, EventArgs e)
         {
-            vaga.Add(new Vaga(txtIdVaga.Text));
+            
+        }
 
-            MessageBox.Show("Vaga Adicionada com sucesso");
+        private void btn_Chekin_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

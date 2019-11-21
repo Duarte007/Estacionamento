@@ -4,7 +4,8 @@ public class Vaga
 {
     private IServico[] servicos;
     public string id;
-	public Vaga()
+	public Vaga(string id)
 	{
+        this.id = id;
 	}
 }

@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace trab_final {
-    class ClienteHorista {
+
+    public class ClienteHorista:Cliente {
         #region Atributos
 
         const double tarifa_hora = 8;
 
         #endregion
+
+        public ClienteHorista(string nome, string cpf)
+        {
+
+        }
 
         #region GetSets
 
@@ -37,4 +42,4 @@ namespace trab_final {
         #endregion
 
     }
-}
+

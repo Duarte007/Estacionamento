@@ -31,15 +31,100 @@ namespace Estacionamento
         {
             Vaga[] vagas = frm_CadastroVaga.getVagas();
 
-            for (int i = 0 ; i < vagas.Length ; i++)
+            for (int i = 0; i < vagas.Length; i++)
             {
-                string[] row = {
-                    vagas[i].id, "1", "1", "2" };
+                string[] row = { vagas[i].id, "1", retornarValorServicos(vagas[i]), "" };
+
                 this.dataGridView1.Rows.Add(row);
             }
+        }
 
-            //songsDataGridView.Columns[0].DisplayIndex = 3;
+        //songsDataGridView.Columns[0].DisplayIndex = 3;
+
+
+        public string checarSituacao(Estacionada estacionada)
+        {
+            string situacao = "";
+
+            int valor = 0;
+
+            if (estacionada.getSaida() == null)
+            {
+
+                return "Ocupada";
+
+            }
+
+            else if (estacionada.getEntrada() == null)
+            {
+
+                return "Desocupada";
+
+            }
+
+            else if (estacionada.getSaida() != null)
+            {
+
+                valor = estacionada.getSaida().CompareTo(DateTime.Now);
+
+                if (valor < 0)
+                {
+
+                    return situacao = "Desocupada";
+
+                }
+
+                else if (valor == 0)
+
+                {
+
+                    return situacao = "Desocupando agora";
+
+                }
+
+                else
+
+                {
+
+                    return situacao = "Ocupada";
+
+                }
+
+            }
+            return situacao;
 
         }
+
+        public double retornarTarifa(Veiculo veiculo, Estacionada quando)
+        {
+
+            return veiculo.tarifa(quando);
+
+        }
+
+        public string retornarValorServicos(Vaga vaga)
+        {
+            double total = 0;
+
+            for (int i = 0; i < vaga.servicos.Length; i++)
+            {
+                if(vaga.servicos[i] != null)
+                    total += vaga.servicos[i].valor();
+              
+            }
+
+            return total.ToString("c");
+           
+        }
+
+
+
+
+
+
+
     }
 }
+
+
+

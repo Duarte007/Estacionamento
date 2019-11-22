@@ -4,7 +4,7 @@ public class Manobrista:IServico {
     public Manobrista() {
     }
 
-    public static double PrecoManobrista;
+    public static double PrecoManobrista = 10;
 
     #region IServico members
 

@@ -5,7 +5,7 @@ public class Moto:Veiculo {
     #region Atributos
 
     const double tarifaBasica = 5;
-    private double desconto = 1;
+    private double desconto = 4;
 
     #endregion
 
@@ -54,8 +54,6 @@ public class Moto:Veiculo {
     
     #region Métodos
     public override double tarifa(Estacionada quando) {
-
-        double valorDesconto = 2;
 
         double tarifaFinal = 0;
 

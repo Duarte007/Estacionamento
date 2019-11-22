@@ -16,4 +16,11 @@ public class Estacionada
     public DateTime getEntrada(){
         return this.entrada;
     }
+
+    public Estacionada(Vaga vaga, DateTime entrada, DateTime saida)
+    {
+        this.vaga = vaga;
+        this.entrada = entrada;
+        this.saida = saida;
+    }
 }

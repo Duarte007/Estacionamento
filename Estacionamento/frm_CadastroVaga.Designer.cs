@@ -69,6 +69,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_CadastroVaga";
             this.Text = "Cadastrar Vaga";
+            this.Load += new System.EventHandler(this.Frm_CadastroVaga_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

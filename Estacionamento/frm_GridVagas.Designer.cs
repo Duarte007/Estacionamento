@@ -48,6 +48,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(650, 486);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // codigo
             // 
@@ -77,6 +78,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "frm_GridVagas";
             this.Text = "Vagas";
+            this.Load += new System.EventHandler(this.Frm_GridVagas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

@@ -1,0 +1,13 @@
+MOTORISTAS - CPF;NOME;TIPOPLANO;TIPOCARRO
+10000227;Alan Castro Gabriel;1;2
+
+TipoPlano: 0 (horista), 1 (diarista), 2 (mensalista)
+TipoCarro: 0 (carro), 1 (carro grande), 3 (moto)
+
+==============
+VAGAS - CÓDIGO;MANOBRISTA;LAVAGEM
+A061;False;True
+
+==============
+ESTACIONADAS - MOTORISTA;VAGA;DATAENTRADA;DATASAIDA
+10001275;A003;05/07/2019 07:04:00;05/07/2019 08:46:00

@@ -24,12 +24,10 @@ namespace Estacionamento
         {
             //vaga.Add(new Vaga(txtIdVaga.Text));
 
-
-
             String s;
             int i;
             String[] dadosVagas;
-            String arqVagas = @"C:\Users\Ian\Desktop\Estacionamento\DadosPOOVagasEstacionamento.txt";
+            String arqVagas = @"C:\Users\Ian\Desktop\Estacionamento\Dados\POOVagasEstacionamento.txt";
             int numeroLinhas = System.IO.File.ReadAllLines(arqVagas).Length;
             Vaga[] vaga = new Vaga[numeroLinhas];
             StreamReader arquivoLeitura;
@@ -43,18 +41,25 @@ namespace Estacionamento
                 while (s != null)
                 {
                     dadosVagas = s.Split(';');
-                  //  string servM, servL;
-                  //  if (dadosVagas[1] == "True")
-                  //  {
-                  //      servM =
-                  //  }
+                
                     vaga[i] = new Vaga(dadosVagas[0]);
-
+                    int auxServico = 0;
+                    if (dadosVagas[1] == "True")
+                    {
+                        vaga[i].Servicos[auxServico] = new Manobrista();
+                        auxServico++;
+                    }
+                    if (dadosVagas[2] == "True")
+                    {
+                        vaga[i].Servicos[auxServico] = new Lavagem();
+                        auxServico++;
+                    }
+                    i++;
                 }
                 // fecha e libera o arquivo de entrada.
                 arquivoLeitura.Close();
 
-                MessageBox.Show("Vaga Adicionada com sucesso");
+                MessageBox.Show("Vagas Adicionadas com sucesso");
             }
         }
     }

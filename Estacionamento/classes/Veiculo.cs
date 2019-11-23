@@ -13,11 +13,8 @@ public abstract class Veiculo
 
     #region GetSets
 
-    public string getPlaca()
-    {
-
+    public string getPlaca() {
         return this.placa;
-
     }
 
     public string getPorte() {
@@ -25,56 +22,37 @@ public abstract class Veiculo
     }
 
     public void setPlaca(string placa) {
-
         try {
             if (placa != "" && placa.Length == 8) {
                 this.placa = placa;
             }
         } catch (FormatException) {
-
             Console.WriteLine("O formato dos dados da placa está incorreto");
-
         } catch (ArgumentNullException) {
-
             Console.WriteLine("A string passada como valor da placa está vazia!");
-
         }
-
-
     }
 
-    public Estacionada getUsos(int posicao) {
-
-        return this.usos[posicao];
-
+    public Estacionada[] getUsos() {
+        return this.usos;
     }
 
     public void setUsos(int posicao, Estacionada valorVaga) {
         try {
             if (this.usos[posicao] == null) {
-
                 this.usos[posicao] = valorVaga;
-
             }
-
         } catch (FormatException) {
-
             Console.WriteLine("O formato de algum dos parâmetros não é válido!");
-
         } catch (ArgumentException) {
-
             Console.WriteLine("Algum dos parâmetros não é válido!");
-
         }
-
     }
     #endregion
 
     #region Métodos
 
-    public virtual double tarifa(Estacionada quando) {
-        return 0;
-    }
+    public abstract double tarifa(Estacionada quando);
 
     #endregion
 }

@@ -20,7 +20,6 @@ namespace Estacionamento
         public static List <Veiculo> veic = new List<Veiculo>();
         public static List<Cliente> cli = new List<Cliente>();
 
-        
  
         private void btnSalvar_Click(object sender, EventArgs e)
         {

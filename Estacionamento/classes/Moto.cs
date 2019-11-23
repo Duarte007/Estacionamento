@@ -5,7 +5,7 @@ public class Moto:Veiculo {
     #region Atributos
 
     const double tarifaBasica = 5;
-    private double desconto = 4;
+    private double desconto = 1.3;
 
     #endregion
 
@@ -21,15 +21,11 @@ public class Moto:Veiculo {
 
     #region GetSets
     public double getTarifaBasica() {
-
         return tarifaBasica;
-
     }
 
     public double getDesconto() {
-
         return desconto;
-
     }
 
     public void setDesconto(double valor, double tarifaBasica) {
@@ -54,17 +50,11 @@ public class Moto:Veiculo {
     
     #region Métodos
     public override double tarifa(Estacionada quando) {
-
         double tarifaFinal = 0;
-
         int tarifaHora = 5;
-
         TimeSpan tempoEstacionada = quando.getSaida().Subtract(quando.getEntrada());
-
         tarifaFinal = (tarifaHora - getDesconto()) * tempoEstacionada.Hours;
-
         return tarifaFinal;
-
     }
 
     #endregion

@@ -12,7 +12,6 @@ public class CarroPequeno:Veiculo {
     public CarroPequeno(string placa) {
         this.porte = "Pequeno";
         setPlaca(placa);
-
     }
 
     #endregion 
@@ -26,15 +25,9 @@ public class CarroPequeno:Veiculo {
 
     #region Métodos 
     public override double tarifa(Estacionada quando) {
-
         double tarifaFinal = 0;
-
-        int tarifaHora = 5;
-
         TimeSpan tempoEstacionada = quando.getSaida().Subtract(quando.getEntrada());
-
         tarifaFinal = getTarifaBasica() * tempoEstacionada.Hours;
-
         return tarifaFinal;
         #endregion 
 

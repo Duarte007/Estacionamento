@@ -12,7 +12,7 @@ public class Vaga
         this.id = id;        
 	}
 
-    public IServico[] getServico(){
+    public IServico[] getServicos(){
         return this.servicos;
     }
 }

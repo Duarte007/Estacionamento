@@ -43,7 +43,7 @@ public class CarroGrande:Veiculo {
 
 
     #region Métodos
-    public double tarifa(Estacionada quando) {
+    public override double tarifa(Estacionada quando) {
         double tarifaFinal = 0;
         TimeSpan tempoEstacionada = quando.getSaida().Subtract(quando.getEntrada());
         tarifaFinal = (getTarifaBasica() + getValorExtra()) * tempoEstacionada.Hours;

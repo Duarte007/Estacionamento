@@ -59,11 +59,23 @@
     <Compile Include="classes\Moto.cs" />
     <Compile Include="classes\Vaga.cs" />
     <Compile Include="classes\Veiculo.cs" />
+    <Compile Include="FiltroVaga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltroVaga.Designer.cs">
+      <DependentUpon>FiltroVaga.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Filtro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Filtro.Designer.cs">
+      <DependentUpon>frm_Filtro.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_CadastroCliente.cs">
       <SubType>Form</SubType>
@@ -127,8 +139,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FiltroVaga.resx">
+      <DependentUpon>FiltroVaga.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Filtro.resx">
+      <DependentUpon>frm_Filtro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_CadastroCliente.resx">
       <DependentUpon>frm_CadastroCliente.cs</DependentUpon>

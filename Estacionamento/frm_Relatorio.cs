@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Estacionamento
-{
-    public partial class frm_Relatorio : Form
-    {
-        public frm_Relatorio()
-        {
+namespace Estacionamento {
+    public partial class frm_Relatorio : Form {
+        public frm_Relatorio() {
             InitializeComponent();
+        }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

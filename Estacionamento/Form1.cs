@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Estacionamento
 {
@@ -59,11 +60,11 @@ namespace Estacionamento
             GrdPlanos.Show();
         }
 
-        private void gerarRelatórioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frm_Relatorio rel = new frm_Relatorio();
-            rel.MdiParent = this;
-            rel.Show();
+        private void gerarRelatórioToolStripMenuItem_Click(object sender, EventArgs e) {
+            //frm_Relatorio rel = new frm_Relatorio();
+            frm_Filtro filtro = new frm_Filtro();
+            filtro.MdiParent = this;
+            filtro.Show();
         }
 
         private void empresaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,6 +93,35 @@ namespace Estacionamento
             frm_OperacaoSaida opeSaida = new frm_OperacaoSaida();
             opeSaida.MdiParent = this;
             opeSaida.Show();
+        }
+
+        private void VagaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FiltroVaga filtro = new FiltroVaga();
+            filtro.MdiParent = this;
+            filtro.Show();
+        }
+
+        private void FaturamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StreamWriter relatorio;
+            relatorio = new StreamWriter(@"..\..\..\Dados\relatorioFaturamento.txt", false, Encoding.ASCII);
+            List<Cliente> clientesCadastrados = frm_CadastroCliente.getClientes();
+
+            double faturamento = 0d;
+            relatorio.WriteLine("Faturamento");
+            foreach(Cliente cli in clientesCadastrados) {
+                double vrPago = cli.valorTarifa();
+                if (vrPago == 0) vrPago = cli.getVeiculo().tarifaTotal();
+                relatorio.WriteLine("Cliente: " + cli.getCpf() + " - " + cli.getNome() + " | " + "Valor Pago: " + vrPago.ToString("c"));
+                
+                faturamento += cli.valorTarifa();
+            }
+            relatorio.WriteLine("Faturamento Total: "+ faturamento.ToString("c"));
+
+            relatorio.Close();
+
+            MessageBox.Show("Relatório gerado com sucesso. Verifique o arquivo relatorioFaturamento.txt");
         }
     }
 }

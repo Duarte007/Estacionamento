@@ -22,8 +22,7 @@ namespace Estacionamento
 
         // public List<Vaga> vaga = new List<Vaga>();
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
+        public void btnSalvar_Click(object sender, EventArgs e) {
             //vaga.Add(new Vaga(txtIdVaga.Text));
 
             String s;
@@ -34,25 +33,21 @@ namespace Estacionamento
             vaga = new Vaga[numeroLinhas];
             StreamReader arquivoLeitura;
 
-            if (File.Exists(arqVagas))
-            {
+            if (File.Exists(arqVagas)) {
                 arquivoLeitura = new StreamReader(arqVagas, Encoding.ASCII);
                 s = arquivoLeitura.ReadLine();
                 i = 0;
 
-                while (s != null)
-                {
+                while (s != null) {
                     dadosVagas = s.Split(';');
                 
                     vaga[i] = new Vaga(dadosVagas[0]);
                     int auxServico = 0;
-                    if (dadosVagas[1] == "True")
-                    {
+                    if (dadosVagas[1] == "True") {
                         vaga[i].servicos[auxServico] = new Manobrista();
                         auxServico++;
                     }
-                    if (dadosVagas[2] == "True")
-                    {
+                    if (dadosVagas[2] == "True") {
                         vaga[i].servicos[auxServico] = new Lavagem();
                         auxServico++;
                     }
@@ -63,6 +58,42 @@ namespace Estacionamento
                 arquivoLeitura.Close();
 
                 MessageBox.Show("Vagas Adicionadas com sucesso");
+            }
+        }
+
+        public static void saveVagas(){
+            String s;
+            int i;
+            String[] dadosVagas;
+            String arqVagas = @"..\..\..\Dados\POOVagasEstacionamento.txt";
+            int numeroLinhas = System.IO.File.ReadAllLines(arqVagas).Length;
+            vaga = new Vaga[numeroLinhas];
+            StreamReader arquivoLeitura;
+
+            if (File.Exists(arqVagas)) {
+                arquivoLeitura = new StreamReader(arqVagas, Encoding.ASCII);
+                s = arquivoLeitura.ReadLine();
+                i = 0;
+
+                while (s != null) {
+                    dadosVagas = s.Split(';');
+                
+                    vaga[i] = new Vaga(dadosVagas[0]);
+                    int auxServico = 0;
+                    if (dadosVagas[1] == "True") {
+                        vaga[i].servicos[auxServico] = new Manobrista();
+                        auxServico++;
+                    }
+                    if (dadosVagas[2] == "True") {
+                        vaga[i].servicos[auxServico] = new Lavagem();
+                        auxServico++;
+                    }
+                    s = arquivoLeitura.ReadLine();
+                    i++;
+                }
+                // fecha e libera o arquivo de entrada.
+                arquivoLeitura.Close();
+
             }
         }
 

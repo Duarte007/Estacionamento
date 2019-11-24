@@ -7,13 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
-namespace Estacionamento
-{
-    public partial class frm_CadastroCliente : Form
-    {
-        public frm_CadastroCliente()
-        {
+namespace Estacionamento {
+    public partial class frm_CadastroCliente : Form {
+        public frm_CadastroCliente() {
             InitializeComponent();
         }
 
@@ -21,8 +19,7 @@ namespace Estacionamento
         public static List<Cliente> cli = new List<Cliente>();
 
  
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
+        private void btnSalvar_Click(object sender, EventArgs e) {
             string nome, cpf, plano, placa, porte;
 
             nome = txt_nome.Text;
@@ -31,11 +28,7 @@ namespace Estacionamento
             placa = mkt1_placa.Text;
             porte = cmb_porte.Text;
 
-           
-
-            switch (porte)
-            {
-                
+            switch (porte) {
                 case "Pequeno":
                    veic.Add(new CarroPequeno(placa));
                     break;
@@ -50,8 +43,7 @@ namespace Estacionamento
                     break;
             }
 
-            switch (plano)
-            {
+            switch (plano) {
                 case "Horista":
                     cli.Add(new ClienteHorista(nome, cpf, veic[veic.Count - 1]));
                     break;
@@ -61,16 +53,71 @@ namespace Estacionamento
                 case "Mensalista":
                     cli.Add(new ClienteMensalista(nome, cpf, veic[veic.Count - 1]));
                     break;
-
-
                 default:
                     break;
             }
 
             this.clearFields();
             MessageBox.Show("Cliente Cadastrado com Sucesso");
+        }
 
+        public static void saveClientes(){
+            String s;
+            int i;
+            String[] dadosClientes;
+            String arqClientes = @"..\..\..\Dados\POOMotoristas.txt";
+            int numeroLinhas = System.IO.File.ReadAllLines(arqClientes).Length;
+            Cliente[] cliente = new Cliente[numeroLinhas];
+            StreamReader arquivoLeitura;
+            string cpf = "", nome = "", tipoPlano = "", tipoCarro = "";
+            
+            if (File.Exists(arqClientes)) {
+                arquivoLeitura = new StreamReader(arqClientes, Encoding.ASCII);
+                s = arquivoLeitura.ReadLine();
+                i = 0;
 
+                while (s != null) {
+                    dadosClientes = s.Split(';');
+                    cpf = dadosClientes[0];
+                    nome = dadosClientes[1];
+                    tipoPlano = dadosClientes[2];
+                    tipoCarro = dadosClientes[3];
+
+                    switch (tipoCarro) {
+                        case "0":
+                            veic.Add(new CarroPequeno("xxx-9876"));
+                            break;
+                        case "1":
+                            veic.Add(new CarroGrande("xxx-9876"));
+                            break;
+                        case "2":
+                            veic.Add(new Moto("xxx-9876"));
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                    switch (tipoPlano) {
+                        case "0":
+                           cli.Add(new ClienteHorista(nome, cpf, veic[veic.Count - 1]));
+                            break;
+                        case "1":
+                           cli.Add(new ClienteDiarista(nome, cpf, veic[veic.Count - 1]));
+                            break;
+                        case "2":
+                           cli.Add(new ClienteMensalista(nome, cpf, veic[veic.Count - 1]));
+                            break;
+                        default:
+                            break;
+                    }
+                   
+                    s = arquivoLeitura.ReadLine();
+                    i++;
+                }
+                // fecha e libera o arquivo de entrada.
+                arquivoLeitura.Close();
+            }
         }
 
         private void clearFields() {
@@ -85,13 +132,11 @@ namespace Estacionamento
             return cli;
         }
 
-        public static List<Veiculo> getVeiculos()
-        {
+        public static List<Veiculo> getVeiculos() {
             return veic;
         }
 
-        private void frm_CadastroCliente_Load(object sender, EventArgs e)
-        {
+        private void frm_CadastroCliente_Load(object sender, EventArgs e) {
 
         }
     }

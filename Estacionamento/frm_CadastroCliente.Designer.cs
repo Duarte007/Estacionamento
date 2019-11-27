@@ -72,7 +72,7 @@
             this.mkt_CPF.Mask = "000.000.000-00";
             this.mkt_CPF.Name = "mkt_CPF";
             this.mkt_CPF.Size = new System.Drawing.Size(199, 20);
-            this.mkt_CPF.TabIndex = 5;
+            this.mkt_CPF.TabIndex = 2;
             // 
             // label2
             // 
@@ -103,7 +103,7 @@
             this.txt_nome.Location = new System.Drawing.Point(19, 51);
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(199, 20);
-            this.txt_nome.TabIndex = 8;
+            this.txt_nome.TabIndex = 1;
             // 
             // label3
             // 
@@ -142,7 +142,7 @@
             this.mkt1_placa.Mask = "AAA-0000";
             this.mkt1_placa.Name = "mkt1_placa";
             this.mkt1_placa.Size = new System.Drawing.Size(199, 20);
-            this.mkt1_placa.TabIndex = 5;
+            this.mkt1_placa.TabIndex = 4;
             // 
             // label6
             // 
@@ -163,14 +163,14 @@
             this.cmb_porte.Location = new System.Drawing.Point(18, 99);
             this.cmb_porte.Name = "cmb_porte";
             this.cmb_porte.Size = new System.Drawing.Size(199, 21);
-            this.cmb_porte.TabIndex = 3;
+            this.cmb_porte.TabIndex = 5;
             // 
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(498, 303);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 10;
+            this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);

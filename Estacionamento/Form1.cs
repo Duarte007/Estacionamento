@@ -121,7 +121,7 @@ namespace Estacionamento
 
             relatorio.Close();
 
-            MessageBox.Show("Relatório gerado com sucesso. Verifique o arquivo relatorioFaturamento.txt");
+            MessageBox.Show("Relatório gerado com sucesso. Verifique o arquivo ./Dados/relatorioFaturamento.txt");
         }
     }
 }

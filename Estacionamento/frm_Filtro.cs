@@ -23,16 +23,18 @@ namespace Estacionamento
             StreamWriter relatorio;
             relatorio = new StreamWriter(@"..\..\..\Dados\relatorioCliente.txt", false, Encoding.ASCII);
             Cliente cliente = frm_CadastroCliente.getClientes()
-                                                    .Find(cli => cli.getCpf() == filtro);
+                                                     .Find(cli => cli.getCpf() == filtro);
             List<Estacionada> historico = cliente.getHistorico();
+            string preco = cliente.valorTarifa() > 0 ? cliente.valorTarifa().ToString("c") : cliente.getVeiculo().tarifaTotal().ToString("c");
             relatorio.WriteLine("Relatorio do Cliente: "+cliente.getNome());
             for(int i = 0 ; i < historico.Count ; i++){
-                 relatorio.WriteLine("Entrada: "+historico[i].getEntrada()+" Saida: "+historico[i].getSaida());
+                 relatorio.WriteLine("Vaga: "+historico[i].getVaga().id+" | Entrada: "+historico[i].getEntrada()+" Saida: "+historico[i].getSaida());
             }
+            relatorio.WriteLine("Valor total: "+preco);
 
             relatorio.Close();        
 
-            MessageBox.Show("Relatório gerado com sucesso. Verifique o arquivo relatorioCliente.txt");                                  
+            MessageBox.Show("Relatório gerado com sucesso. Verifique o arquivo ./Dados/relatorioCliente.txt");                                  
         }
     }
 }

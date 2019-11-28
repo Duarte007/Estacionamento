@@ -69,7 +69,7 @@ namespace Estacionamento {
             int numeroLinhas = System.IO.File.ReadAllLines(arqClientes).Length;
             Cliente[] cliente = new Cliente[numeroLinhas];
             StreamReader arquivoLeitura;
-            string cpf = "", nome = "", tipoPlano = "", tipoCarro = "";
+            string cpf = "", nome = "", tipoPlano = "", tipoCarro = "", placa = "";
             
             if (File.Exists(arqClientes)) {
                 arquivoLeitura = new StreamReader(arqClientes, Encoding.ASCII);
@@ -82,16 +82,17 @@ namespace Estacionamento {
                     nome = dadosClientes[1];
                     tipoPlano = dadosClientes[2];
                     tipoCarro = dadosClientes[3];
+                    placa = dadosClientes[4];
 
                     switch (tipoCarro) {
                         case "0":
-                            veic.Add(new CarroPequeno("xxx-9876"));
+                            veic.Add(new CarroPequeno(placa));
                             break;
                         case "1":
-                            veic.Add(new CarroGrande("xxx-9876"));
+                            veic.Add(new CarroGrande(placa));
                             break;
                         case "2":
-                            veic.Add(new Moto("xxx-9876"));
+                            veic.Add(new Moto(placa));
                             break;
 
                         default:

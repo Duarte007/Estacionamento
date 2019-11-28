@@ -33,12 +33,12 @@ namespace Estacionamento
             }
             relatorio.WriteLine("Relatorio Vaga: " + this.filtro);
             for (int i = 0; i < historico.Count; i++) {
-                relatorio.WriteLine("Entrada: " + historico[i].getEntrada() + " Saida: " + historico[i].getSaida());
+                relatorio.WriteLine(" Entrada: " + historico[i].getEntrada() + " Saida: " + historico[i].getSaida());
             }
 
             relatorio.Close();
 
-            MessageBox.Show("Relatório gerado com sucesso. Verifique o arquivo relatorioVaga.txt");
+            MessageBox.Show("Relatório gerado com sucesso. Verifique o arquivo ./Dados/relatorioVaga.txt");
         }
     }
 }

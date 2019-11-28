@@ -39,6 +39,11 @@ namespace Estacionamento {
             foreach (Estacionada uso in this.getUsos()) {
                 TimeSpan tempoEstacionada = uso.getSaida().Subtract(uso.getEntrada());
                 tarifaFinal = getTarifaBasica() * tempoEstacionada.Hours;
+                foreach( IServico servico in uso.getVaga().getServicos()){
+                    if(servico != null){
+                        tarifaFinal += servico.valor();    
+                    }
+                }
             }
             return tarifaFinal;
         }

@@ -1848,5 +1848,4 @@ Cliente: 10280050 - Filipe Castro Magalh??es | Valor Pago: R$42,00
 Cliente: 10280122 - Filipe Castro Camargos | Valor Pago: R$14,00
 Cliente: 10280392 - Pedro Castro Magalh??es | Valor Pago: R$10,00
 Cliente: 10280509 - Victor Castro Jardim | Valor Pago: R$11,10
-Cliente: 121,944,366-26 - Duarte | Valor Pago: R$0,00
 Faturamento Total: R$34.836,00

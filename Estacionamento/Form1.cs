@@ -112,7 +112,7 @@ namespace Estacionamento
             relatorio.WriteLine("Faturamento");
             foreach(Cliente cli in clientesCadastrados) {
                 double vrPago = cli.valorTarifa();
-                if (vrPago == 0) vrPago = cli.getVeiculo().tarifaTotal();
+                // if (vrPago == 0) vrPago = cli.getVeiculo().tarifaTotal();
                 relatorio.WriteLine("Cliente: " + cli.getCpf() + " - " + cli.getNome() + " | " + "Valor Pago: " + vrPago.ToString("c"));
                 
                 faturamento += cli.valorTarifa();

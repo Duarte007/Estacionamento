@@ -19,6 +19,8 @@ namespace Estacionamento
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
+            txtPrecoL.Text = txtPrecoL.Text != "" ? txtPrecoL.Text : Lavagem.PrecoLavagem.ToString();
+            txtPrecoM.Text = txtPrecoM.Text != "" ? txtPrecoM.Text : Manobrista.PrecoManobrista.ToString();
             Lavagem.PrecoLavagem = Convert.ToDouble(txtPrecoL.Text);
             Manobrista.PrecoManobrista= Convert.ToDouble(txtPrecoM.Text);
 

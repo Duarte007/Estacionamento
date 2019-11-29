@@ -10,7 +10,7 @@ namespace Estacionamento {
         public string nome;
         public string cpf;
         protected Veiculo veiculo;
-        public static string plano;
+        public string planoCliente;
 
         #endregion
 
@@ -26,6 +26,8 @@ namespace Estacionamento {
         public Veiculo getVeiculo() {
             return this.veiculo;
         }
+
+        public abstract string getPlano();
 
         public void setNome(string nome)  {
             try {
@@ -51,7 +53,9 @@ namespace Estacionamento {
         #region Métodos
 
         
-        public abstract double valorTarifa();
+        public double valorTarifa() {
+            return this.veiculo.tarifaTotal();
+        }
 
         public List<Estacionada> getHistorico(){
             return this.veiculo.getUsos();

@@ -33,7 +33,7 @@ namespace Estacionamento
             
             foreach (Cliente cliente in clientes) {
                 string[] row = {
-                    cliente.getCpf(), cliente.getNome(), "teste", cliente.getVeiculo().getPlaca() };
+                    cliente.getCpf(), cliente.getNome(), cliente.getPlano(), cliente.getVeiculo().getPlaca() };
                 this.dataGridView1.Rows.Add(row);
             }
 

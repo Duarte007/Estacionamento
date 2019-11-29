@@ -26,6 +26,15 @@ namespace Estacionamento
             StreamWriter relatorio;
             relatorio = new StreamWriter(@"..\..\..\Dados\relatorioVaga.txt", false, Encoding.ASCII);
             List<Estacionada> historico = new List<Estacionada>();
+            List<Cliente> clientes = frm_CadastroCliente.getClientes();
+            // foreach (Cliente cliente in clientes){
+            //     foreach(Estacionada es in cliente.getVeiculo().getUsos()){
+            //         if(es.getVaga().id == filtro){
+
+            //             historico = es.getVaga().getHistoricoVaga();
+            //         }
+            //     }
+            // }
             foreach (Vaga vaga in frm_CadastroVaga.getVagas()){
                 if(vaga.id == filtro){
                     historico = vaga.getHistoricoVaga();

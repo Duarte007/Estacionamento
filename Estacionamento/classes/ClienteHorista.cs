@@ -9,7 +9,7 @@ namespace Estacionamento {
         #region Atributos
 
         const double tarifa_hora = 8;
-        public static string plano = "Horista";
+        public string planoCliente = "Horista";
 
         #endregion
 
@@ -21,6 +21,10 @@ namespace Estacionamento {
 
         #region GetSets
 
+
+        public override string getPlano() {
+            return this.planoCliente;
+        }
         double getTarifaHora() {
             return tarifa_hora;
         }
@@ -28,23 +32,6 @@ namespace Estacionamento {
         #endregion
 
         #region Métodos
-        public override double valorTarifa() {
-
-            double tarifaFinal = 0;
-            
-             foreach (Estacionada uso in this.veiculo.getUsos()) {
-                TimeSpan diasEstacionada = uso.getSaida().Subtract(uso.getEntrada());
-                tarifaFinal += getTarifaHora() * diasEstacionada.Hours;
-                foreach( IServico servico in uso.getVaga().getServicos()){
-                    if(servico != null){
-                        tarifaFinal += servico.valor();    
-                    }
-                }
-            }
-
-            return tarifaFinal;
-            
-        }
 
         #endregion
 

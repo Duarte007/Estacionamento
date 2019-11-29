@@ -9,7 +9,7 @@ namespace Estacionamento {
         #region Atributos
 
         const double tarifa_mensal = 250;
-        public static string plano = "Mensal";
+        public string planoCliente = "Mensal";
 
         #endregion
 
@@ -21,6 +21,10 @@ namespace Estacionamento {
 
         #region GetSets
 
+
+        public override string getPlano() {
+            return this.planoCliente;
+        }
         public double getTarifaMensal() {
             return tarifa_mensal;
         }
@@ -28,22 +32,6 @@ namespace Estacionamento {
         #endregion
 
         #region Métodos
-
-        public override double valorTarifa() {
-            double tarifaFinal = 0d;
-
-            foreach (Estacionada uso in this.veiculo.getUsos()) {
-                TimeSpan diasEstacionada = uso.getSaida().Subtract(uso.getEntrada());
-                tarifaFinal += getTarifaMensal() * (diasEstacionada.Days/30);
-                foreach( IServico servico in uso.getVaga().getServicos()){
-                    if(servico != null){
-                        tarifaFinal += servico.valor();    
-                    }
-                }
-            }
-
-            return tarifaFinal;
-        }
 
         #endregion
 
